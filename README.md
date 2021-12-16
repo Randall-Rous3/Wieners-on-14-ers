@@ -1,5 +1,5 @@
 # Wieners-on-14-ers
-## https://trello.com/b/7EIWk8R7/wieners-on-14ers
+## <https://trello.com/b/7EIWk8R7/wieners-on-14ers alt= Trello/>
 
 ## Objectives
 Creating a app that allows people to add pictures of their best friend (dog) on their favorite hikes (14ers). The app will allow visitors to view pictures of dogs on all of CO. mountains over 14,000 ft. The visitor will be able to navigate to a specicic mountain and view all of the dogs on that peak or stay on the home page and generate a random dog on a random summit. 
