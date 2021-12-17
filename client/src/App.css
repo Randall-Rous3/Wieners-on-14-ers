@@ -1,17 +1,16 @@
+@font-face {
+  font-family: 'Fuzzy Bubbles', cursive;
+  src: url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Montserrat+Alternates:wght@100&family=Permanent+Marker&family=Warnes&display=swap');
+}
 .App {
+
   text-align: center;
 }
 
 
-.img{
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 10px;
-  min-height: 90%;
-  background-repeat: no-repeat;
+
   
-  
-}
+
 form {
   background-color:rgb(192, 149, 68, 1) ;
   padding: 1em;
@@ -29,17 +28,24 @@ h2{
 }
 h1{
   text-align:center;
-  font-family: 'Warnes', cursive;
-  color: rgb(190, 241, 192);
-  text-shadow:
-  0 0 7px rgb(221, 127, 84),
-  0 0 10px rgb(203, 236, 195),
-  0 0 21px rgb(136, 230, 159),
+  font-family:'Fuzzy Bubbles', cursive;
+
 }
-.description{
-  height:6vh;
-  width: 15vw;
+.home{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
 }
+.ride-card{
+  display: flex;
+  justify-content: space-around;
+  margin: 1vh;
+}
+.ride-grid {
+
+}
+
 .input {
   width: 15vw;
   height: auto;
@@ -58,44 +64,24 @@ header{
   grid-area: header;
   text-align: center;
   font-size: 7vmin;
-  font-family: 'Warnes', cursive;
-  color: rgb(190, 241, 192);
-  text-shadow:
-  0 0 7px rgb(221, 127, 84),
-  0 0 10px rgb(203, 236, 195),
-  0 0 21px rgb(136, 230, 159),
-  0 0 42px rgb(90, 182, 128),
-  0 0 82px rgb(110, 197, 168),
-  0 0 92px rgb(151, 228, 202),
-  0 0 102px rgb(161, 209, 193),
-  0 0 151px #e6f5f0;
- ;
+  font-family: 'Fuzzy Bubbles', cursive;
 }
 nav{
   grid-area: mid;
   border-radius: 5px;
-  background-image: linear-gradient(to bottom right, rgba(20, 16, 8, 0), rgb(192, 149, 68, 1));
+  
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   height: 3em;
   font-size: 2vw;
   font-weight: bold;
-  font-family: 'Warnes', cursive;
+  font-family: 'Fuzzy Bubbles', cursive;
 }
  .nav   {
   margin: 0 1em;
-  color: rgb(190, 241, 192);
-  text-shadow:
-  0 0 7px rgb(221, 127, 84),
-  0 0 10px rgb(119, 230, 91),
-  0 0 21px rgb(84, 207, 115),
-  0 0 42px rgb(63, 212, 163),
-  0 0 82px rgb(27, 233, 164),
-  0 0 92px #0fa,
-  0 0 102px rgb(161, 209, 193),
-  0 0 151px #63bd9f;
- ;
+  color: black;
+ 
   text-decoration: none;
 }
 .nav:hover{

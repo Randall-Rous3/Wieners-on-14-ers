@@ -2,14 +2,22 @@ import './App.css';
 import React, {useState} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from './components/Header';
-import './App.css';
+import Home from './pages/Home'
+import Mountain from './pages/Mountain'
+import AddDog from './pages/Add_dog'
+
 
 function App() {
   return (
     <div className="App">
-      <h1>HELLO</h1>
     <Header />
-
+    <main>
+        <Switch>
+          <Route exact path="/" component ={Home} />
+          <Route path="/addDog" component = {AddDog}/>
+          <Route path="/mountains" component ={Mountain} />
+        </Switch>
+      </main>
     </div>
   );
 }
