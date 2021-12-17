@@ -9,7 +9,8 @@ export default function AddDog() {
   const [newDog, setNewDog] = useState({
     name: '',
     breed: '',
-    date: ''
+    date: '',
+    image: ''
   });
   const createDog = (e) =>{
     e.preventDefault();
@@ -24,6 +25,7 @@ export default function AddDog() {
       name: '',
       breed: '',
       date: '',
+      image:''
     });
 }
   const handleChange = (e) => {
@@ -37,11 +39,6 @@ export default function AddDog() {
   return (
     <div>
       <h1>Add Your Pup!</h1>
-      <img className = 'img'
-            style={{ display: 'block', minWidth: '90%' }}
-            src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F64.media.tumblr.com%2F6f5f6247b6fc95afdfa7f2cd2aea9d51%2Ftumblr_pawiiuyiZ41rq1ow1o1_500.jpg&f=1&nofb=1'
-            alt="logo"
-          />
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -64,6 +61,25 @@ export default function AddDog() {
           name={'date'}
           placeholder={'date of photo'}
         />
+        <input
+          type="file"
+          value={newDog.image}
+          onChange={handleChange}
+          name={'image'}
+          placeholder={'image url'}
+        />
+        <select >
+            <option > " what mountain?"</option>
+            <option > " Gray's Peak"</option>
+            <option > " what mountain?"</option>
+            <option > " what mountain?"</option>
+            <option > " what mountain?"</option>
+            <option > " what mountain?"</option>
+            <option > " what mountain?"</option>
+            <option > " what mountain?"</option>
+            <option > " what mountain?"</option>
+            <option > " what mountain?"</option>
+        </select>
         <button type="submit">Submit</button>
       </form>
     </div>

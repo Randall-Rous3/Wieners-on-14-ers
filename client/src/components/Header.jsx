@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
+import MountainCard from './MountainCard'
 
 export default function Header(props) {
   return (
@@ -10,8 +10,11 @@ export default function Header(props) {
         <NavLink className = 'nav' to="/">Home</NavLink>
         <NavLink className = 'nav' to="/addDog">Add Pup Pic</NavLink>
         <NavLink className = 'nav' to="/mountains">Mountains</NavLink>
+        <NavLink className = 'nav' to="/dogs">Dogs</NavLink>
 
       </nav>
+      <NavLink className= 'mount' to="/">{MountainCard}</NavLink>
     </header>
+   
   )
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import MountainCard from '../components/MountainCard';
 
 
 
@@ -13,31 +14,36 @@ import axios from 'axios';
 
 const Mountains = (props) => {
   let mountainsArray = [];
-  const [mountain, setMountains] = useState(mountainsArray);
+  const [mountains, setMountains] = useState(mountainsArray);
   const showMountains = (mountain) => {};
 
 
-  const getAllMountains = async () => {
+  const getMountains = async () => {
     const response = await axios.get('http://localhost:3001/api/mountains');
-    setMountains(response.data.rides);
+    setMountains(response.data.mountains);
   };
 
   useEffect(() => {
-    getAllMountains();
+    getMountains();
   }, []);
 
 
 
 
   return (
-    <div className="ride-grid">
+    <div className="mountain-grid">
       <h1>Show All Mountains</h1>
-        {mountain.map((mountain) => (
-        <div className="ride-card"> 
-            <img style={{ display: 'block' }} src={mountain.image} />
-            <h3>{mountain.name} <br/> </h3>
-
-        </div>
+        {mountains.map((mountain) => (
+        <MountainCard
+        key={mountain.id}
+        {...mountain}
+        name = {mountain.name}
+        image={mountain.image}
+        id = {mountain._id}
+        onClick= {()=>
+            props.history.push(`/mountains/${mountain._id}`)
+        }
+        />
       ))} 
     </div>
   );
