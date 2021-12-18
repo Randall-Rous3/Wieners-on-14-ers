@@ -31,8 +31,9 @@ const MountainDogs = (props) => {
 
 
   return (
-    <div className="mountain-grid">
-      <h1>Show All Dogs</h1>
+        <div><h1>Show All Dogs</h1>  
+      
+      <div className="mountain-grid">
         {mountDog.map((dog) => (
         <DogCard
         key={dog.id}
@@ -41,12 +42,14 @@ const MountainDogs = (props) => {
         image={dog.image}
         breed ={dog.breed}
         id = {dog._id}
+        location = {dog.location}
         onClick= {()=>
         props.history.push(`/dogs/${dog._id}`)
         }
         />
       ))} 
     </div>
+    </div>  
   );
 
 }

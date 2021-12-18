@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
-let MONGODB_URI = 'mongodb://127.0.0.1:27017/mountainsDatabase'
+let MONGODB_URI = 'mongodb://127.0.0.1:27017/dogsDatabase'
 mongoose
-  .connect('mongodb://127.0.0.1:27017/mountainsDatabase')
+  .connect('mongodb://127.0.0.1:27017/dogsDatabase')
   .then(() => {
     console.log('Successfully connected to MongoDB.')
   })

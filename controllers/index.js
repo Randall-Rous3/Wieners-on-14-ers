@@ -38,10 +38,21 @@ const getAllMountains = async (req, res) => {
       return res.status(500).send(error.message);
   }
 }
+const addDogToMount = async (req, res ) => {
+ 
+        try {
+            const mountains = await Mountains.updateOne()
+            return res.status(200).json({ mountains})
+        } catch (error) {
+            return res.status(500).send(error.message);
+        }
+      
+}
 
 
 module.exports = {
     createDog,
     getAllMountains,
-    getAllDogs
+    getAllDogs,
+    addDogToMount
 }

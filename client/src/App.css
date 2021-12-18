@@ -7,7 +7,7 @@
   text-align: center;
 }
 form {
-  background-color:rgb(192, 149, 68, 1) ;
+  background-color:rgb(192, 149, 68, .1) ;
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -20,6 +20,11 @@ form {
 }
 
 h1{
+  text-align:center;
+  font-family:'Fuzzy Bubbles', cursive;
+
+}
+h3{
   text-align:center;
   font-family:'Fuzzy Bubbles', cursive;
 
@@ -39,20 +44,35 @@ h1{
 .mountain-grid {
   display: grid;
   grid-template-columns: repeat(3, 33vw);
+  justify-content: space-around;
   flex-wrap: wrap;
+  text-align: center;
   row-gap: 1vh;
   column-gap: 1vw;
   padding: 5vmin;
 
 }
 .img{
-  max-height:20vh ;
-  width: 20vw;
+  max-height:30vmin ;
+  width: auto;
+  border-radius: 1vmin;
+  border: solid black 1px; 
+  
+
+}
+.logo{
+  max-height:30vh ;
+  width: auto;
+  animation: App-logo-spin infinite 20s linear;
+  border-radius: 1vmin;
+  
+
 }
 
 .input {
   width: 15vw;
   height: auto;
+
 }
 header{
   
