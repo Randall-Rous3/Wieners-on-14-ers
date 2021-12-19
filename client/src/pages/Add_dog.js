@@ -5,6 +5,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MountainDogs from './Mountain_Dogs';
+import DogCard from '../components/DogCard';
+import TextField from '@material-ui/core/TextField';
 
 
 export default function AddDog() {
@@ -41,6 +43,7 @@ export default function AddDog() {
     createDog(e);
   };
 
+
   return (
     <div>
       <h1>Add Your Pup!</h1>
@@ -60,11 +63,11 @@ export default function AddDog() {
           placeholder={'type of pupper'}
         />
         <input
-          type="text"
+          type="date"
           value={newDog.date}
           onChange={handleChange}
           name={'date'}
-          placeholder={'date of photo'}
+          label={'date of photo'}
         />
         <input
           type="text"

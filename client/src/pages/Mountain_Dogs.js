@@ -39,9 +39,7 @@ const MountainDogs = (props) => {
         breed ={dog.breed}
         id = {dog._id}
         location = {dog.location}
-        onClick= {()=>
-        props.history.push(`/dogs/${dog._id}`)
-        }
+        onclick = {console.log('clicked')}
         />
       ))} 
     </div>

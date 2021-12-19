@@ -35,10 +35,10 @@ h3{
   text-align: center;
 
 }
-.mountain-card{
+.dog-card{
   display: flex;
   justify-content: space-around;
-  max-height: 20vh;
+  max-height: 30vh;
   max-width: auto;
 }
 .mountain-grid {
