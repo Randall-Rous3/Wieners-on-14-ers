@@ -10,11 +10,11 @@ form {
   background-color:rgb(192, 149, 68, .1) ;
   padding: 1em;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  width: 20vw;
-  min-height: 30vh;
+  width: auto;
+  min-height: auto;
   margin: 2em auto;
   border-radius: 0.3em;
 }
@@ -37,11 +37,18 @@ h3{
 }
 .dog-card{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  text-align: center;
   max-height: 30vh;
   max-width: auto;
 }
-.mountain-grid {
+.mountain-card{
+  display: flex;
+  justify-content: center;
+  max-height: 25vh;
+  max-width: auto;
+}
+.dog-grid {
   display: grid;
   grid-template-columns: repeat(3, 33vw);
   justify-content: space-around;
@@ -49,7 +56,18 @@ h3{
   text-align: center;
   row-gap: 1vh;
   column-gap: 1vw;
-  padding: 5vmin;
+  padding: 1vmin;
+
+}
+.mountain-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 25vw);
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  row-gap: 1em;
+  column-gap: 1em;
+  padding: 1em;
 
 }
 .img{
@@ -57,14 +75,6 @@ h3{
   width: auto;
   border-radius: 1vmin;
   border: solid black 1px; 
-  
-
-}
-.logo{
-  max-height:30vh ;
-  width: auto;
-  animation: App-logo-spin infinite 20s linear;
-  border-radius: 1vmin;
   
 
 }
@@ -78,20 +88,32 @@ header{
   
     display: grid;
     grid-template-areas:
-    'header header header header header header'
-    'mid mid mid mid mid mid '
-    'menu footer footer footer footer footer';
+    'headerL headerC headerR'
+    'midL midC midR '
+    'footer footer footer';
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Fwww.thevirtualsherpa.com%2Fwp-content%2Fuploads%2F2017%2F10%2FDSC_0181.jpg&f=1&nofb=1');
+    background-size: cover;
+    background-position: center;
     grid-gap: 10px;
     padding: 10px;
   }
+  .logo{
+    height: 20em;
+    width: 20em;
+    grid-area: midL;
+    animation: App-logo-spin infinite 20s linear;
+    border-radius: 1vmin;
+    
+  
+  }
 #name{
-  grid-area: header;
+  grid-area: headerC;
   text-align: center;
   font-size: 7vmin;
   font-family: 'Fuzzy Bubbles', cursive;
 }
 nav{
-  grid-area: mid;
+  grid-area: midC;
   border-radius: 5px;
   
   display: flex;

@@ -5,9 +5,9 @@ function Home() {
     <div className="home">
       <div>
       <h2> </h2>
-        <img className = 'logo'
+      <img className = 'logo'
           style={{ display: 'block', minWidth: '90%' }}
-          src='https://pngimg.com/uploads/dog/dog_PNG50337.png'
+          src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpurepng.com%2Fpublic%2Fuploads%2Fmedium%2Fpurepng.com-dog-paw-printdogpetcatpuppyanimalprintpaw-981524650187mtfto.png&f=1&nofb=1'
           alt="logo"
         />
       </div>

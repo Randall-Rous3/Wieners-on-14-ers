@@ -31,7 +31,7 @@ const MountainDogs = (props) => {
   return (
         <div><h1>Show All Dogs</h1>  
       
-      <div className="mountain-grid">
+      <div className="dog-grid">
         {mountDog.map((dog) => (
         <DogCard
         key={dog.id}
@@ -46,12 +46,6 @@ const MountainDogs = (props) => {
         
       ))} 
     </div>
-    
-          {/* <AddDog 
-          render ={getMountainDogs}
-          /> */}
-
-
     </div>  
   );
 

@@ -2,14 +2,13 @@
 
 
 
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import axios from 'axios';
 import MountainDogs from './Mountain_Dogs';
-import DogCard from '../components/DogCard';
-import TextField from '@material-ui/core/TextField';
 
 
-export default function AddDog() {
+
+export default function AddDog(props) {
   const [returnId, setReturnId] = useState(0);
   const [newDog, setNewDog] = useState({
     name: '',
@@ -25,7 +24,7 @@ export default function AddDog() {
     console.log(createdDog);
     axios
       .post('http://localhost:3001/api/addDog', createdDog)
-      .then((response) => setReturnId(response.data));
+      .then((response) => setReturnId(response.data))
     setNewDog({
       name: '',
       breed: '',
@@ -41,6 +40,7 @@ export default function AddDog() {
   };
   const handleSubmit = (e) => {
     createDog(e);
+    
   };
 
 
@@ -70,7 +70,8 @@ export default function AddDog() {
           label={'date of photo'}
         />
         <input
-          type="text"
+          type="file"
+          accept='image/*'
           value={newDog.image}
           onChange={handleChange}
           name={'image'}

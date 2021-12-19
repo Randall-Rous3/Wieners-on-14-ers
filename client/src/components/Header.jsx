@@ -9,9 +9,8 @@ export default function Header(props) {
       <nav >
         <NavLink className = 'nav' to="/">Home</NavLink>
         <NavLink className = 'nav' to="/addDog">Mountain Dogs</NavLink>
-        {/* <NavLink className = 'nav' to="/mountains">Mountains</NavLink> */}
+        <NavLink className = 'nav' to="/mountains">Mountains</NavLink>
         {/* <NavLink className = 'nav' to="/dogs">Dogs</NavLink> */}
-
       </nav>
       <NavLink className= 'mount' to="/">{MountainCard}</NavLink>
     </header>

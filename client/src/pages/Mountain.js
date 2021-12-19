@@ -32,7 +32,6 @@ const Mountains = (props) => {
 
   return (
     <div className="mountain-grid">
-      <h1>Show All Mountains</h1>
         {mountains.map((mountain) => (
         <MountainCard
         key={mountain.id}
