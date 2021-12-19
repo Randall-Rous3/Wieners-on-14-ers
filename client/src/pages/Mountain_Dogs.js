@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DogCard from '../components/DogCard';
+import AddDog from './Add_dog';
+
 
 
 
@@ -16,7 +18,7 @@ const MountainDogs = (props) => {
   const getMountainDogs = async () => {
     const response = await axios.get('http://localhost:3001/api/dogs');
     setMountDogs(response.data.dogs);
-    console.log(response)
+   
   };
 
   useEffect(() => {
@@ -39,10 +41,17 @@ const MountainDogs = (props) => {
         breed ={dog.breed}
         id = {dog._id}
         location = {dog.location}
-        onclick = {console.log('clicked')}
+        render ={getMountainDogs}
         />
+        
       ))} 
     </div>
+    
+          {/* <AddDog 
+          render ={getMountainDogs}
+          /> */}
+
+
     </div>  
   );
 

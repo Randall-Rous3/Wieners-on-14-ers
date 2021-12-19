@@ -8,10 +8,20 @@ import MountainDogs from '../pages/Mountain_Dogs';
 
 
 
+
 const DogCard = (props) => {
   
 
-
+  const deleteDog = (e) =>{
+   
+   
+    console.log(props.id);
+    axios
+      .delete(`http://localhost:3001/api/dogs/${props.id}`, )
+      .then (props.render)
+      
+    
+}
 
 
 
@@ -19,8 +29,9 @@ const DogCard = (props) => {
         <div className='Dog-grid '>
             <h1>{props.name}</h1>
       <div className="Dog-card" onClick={props.onClick}>
-          <img className='img' src= {props.image} alt="Dog"/> 
-          <button>delete</button>
+          <div className='pic'> <img className='img' src= {props.image} alt="Dog"/> 
+          <button className='delete' onClick={deleteDog}>delete </button> 
+          </div>         
         <div className="info-wrapper flex-row space">
           <h3> breed: {props.breed} <br/> date: {props.date} <br/> Mountain: {props.location} </h3>
         </div>

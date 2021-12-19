@@ -114,6 +114,13 @@ nav{
 h3{
   text-align: center;
 }
+.delete{
+ 
+  border-radius: 1vmin;
+}
+.delete:hover{
+  border: solid red 1px;
+}
 
 @keyframes App-logo-spin {
   from {
