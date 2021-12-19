@@ -8,7 +8,7 @@ export default function Header(props) {
       <h1 id='name'> Wieners on 14ers </h1>
       <nav >
         <NavLink className = 'nav' to="/">Home</NavLink>
-        <NavLink className = 'nav' to="/addDog">Add Pup Pic</NavLink>
+        <NavLink className = 'nav' to="/addDog">Mountain Dogs</NavLink>
         {/* <NavLink className = 'nav' to="/mountains">Mountains</NavLink> */}
         {/* <NavLink className = 'nav' to="/dogs">Dogs</NavLink> */}
 

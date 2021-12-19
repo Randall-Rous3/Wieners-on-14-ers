@@ -7,11 +7,6 @@ import DogCard from '../components/DogCard';
 
 
 
-
-   
-
-
-
 const MountainDogs = (props) => {
   let mountainDogArray = [];
   const [mountDog, setMountDogs] = useState(mountainDogArray);
@@ -27,6 +22,7 @@ const MountainDogs = (props) => {
   useEffect(() => {
     getMountainDogs()
   }, []);
+  
 
 
 

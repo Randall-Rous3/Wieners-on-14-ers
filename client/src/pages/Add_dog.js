@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MountainDogs from './Mountain_Dogs';
 
+
 export default function AddDog() {
   const [returnId, setReturnId] = useState(0);
   const [newDog, setNewDog] = useState({
@@ -31,6 +32,7 @@ export default function AddDog() {
       location: ''
     });
 }
+
   const handleChange = (e) => {
     setNewDog({ ...newDog, [e.target.name]: e.target.value });
    

@@ -7,6 +7,7 @@ router.get("/", (req, res) => res.send("This is root!"))
 router.get('/mountains',controllers.getAllMountains)
 router.get('/dogs', controllers.getAllDogs)
 router.post('/addDog',controllers.createDog)
+router.post('/deleteDog',controllers.deleteDog)
 router.put('/listDog',controllers.addDogToMount)
 
 

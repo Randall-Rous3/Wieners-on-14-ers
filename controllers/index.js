@@ -12,7 +12,15 @@ const Dogs = require('../models/Dogs')
 
 
 
-
+const deleteDog = async (req, res) => {
+    try {
+        const dogs = 
+        await dogs.deleteOne()
+        return res.status(201).json({ dogs });
+    } catch (error) {
+        return res.status(500).json({ error: error.message })
+    }
+}
 const createDog = async (req, res) => {
     try {
         const dogs = await new Dogs(req.body)
@@ -51,6 +59,7 @@ const addDogToMount = async (req, res ) => {
 
 
 module.exports = {
+    deleteDog,
     createDog,
     getAllMountains,
     getAllDogs,
