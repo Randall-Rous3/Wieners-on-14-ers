@@ -8,6 +8,7 @@ import AddDog from './pages/Add_dog'
 import MountainCard from './components/MountainCard';
 import MountainDogs from './pages/Mountain_Dogs'
 import DogCard from './components/DogCard';
+import MountainDetails from './pages/mountainDetails'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/mountains" component ={Mountain} />
           <Route path="/mountains/:mountainId" component = {MountainCard} />
           <Route path="/dogs" component = {MountainDogs} />
+          <Route path="/mountains/details/:mountainId" component ={MountainDetails}/>
         </Switch>
       </main>
     </div>

@@ -2,13 +2,15 @@
 
 
 
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 import MountainDogs from './Mountain_Dogs';
-
+import DogCard from '../components/DogCard';
 
 
 export default function AddDog(props) {
+  let mountainDogArray = [];
+  const [mountDog, setMountDogs] = useState(mountainDogArray);
   const [returnId, setReturnId] = useState(0);
   const [newDog, setNewDog] = useState({
     name: '',
@@ -23,7 +25,7 @@ export default function AddDog(props) {
     };
     console.log(createdDog);
     axios
-      .post('http://localhost:3001/api/addDog', createdDog)
+      .post('http://localhost:3001/api/dogs', createdDog)
       .then((response) => setReturnId(response.data))
     setNewDog({
       name: '',
@@ -33,6 +35,16 @@ export default function AddDog(props) {
       location: ''
     });
 }
+const getMountainDogs = async () => {
+  const response = await axios.get('http://localhost:3001/api/dogs');
+  setMountDogs(response.data.dogs);
+ 
+};
+
+
+useEffect(() => {
+  getMountainDogs()
+}, []);
 
   const handleChange = (e) => {
     setNewDog({ ...newDog, [e.target.name]: e.target.value });
@@ -40,6 +52,8 @@ export default function AddDog(props) {
   };
   const handleSubmit = (e) => {
     createDog(e);
+    getMountainDogs(e)
+    
     
   };
 
@@ -70,7 +84,7 @@ export default function AddDog(props) {
           label={'date of photo'}
         />
         <input
-          type="file"
+          type="text"
           accept='image/*'
           value={newDog.image}
           onChange={handleChange}
@@ -144,7 +158,25 @@ export default function AddDog(props) {
         </select>
         <button type="submit">Submit</button>
       </form>
-      <MountainDogs/>
+      <div><h1>Show All Dogs</h1>  
+      
+      <div className="dog-grid">
+        {mountDog.map((dog) => (
+        <DogCard
+        key={dog.id}
+        {...dog}
+        name = {dog.name}
+        image={dog.image}
+        breed ={dog.breed}
+        id = {dog._id}
+        location = {dog.location}
+        render ={getMountainDogs}
+        />
+        
+      ))} 
+    </div>
+    </div>  
+
     </div>
   );
 }

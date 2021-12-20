@@ -6,6 +6,7 @@ const Mountain = new Schema(
     name: { type: String, required: true },
     image: { type: String, required: false },
     location:{ type: String, required: true },
+    description: {type: String},
     dogs: [{ type: Schema.Types.ObjectId, ref: 'dogs'}]
   },
   { timestamps: true }

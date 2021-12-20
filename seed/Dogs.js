@@ -8,8 +8,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
     const dog = [  
-        {name: 'Dot' ,breed: 'Mutt' ,date:'12/16/2021', image:'https://i.imgur.com/UbVeLVR.jpg', location: "Denver, CO." } ,
-        {name: 'potato' ,breed: 'Mutt' ,date:'12/16/2021', image:'https://scontent-bos3-1.xx.fbcdn.net/v/t1.18169-9/1526409_717766148305987_5391536379066156078_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=QB-PnlbchKQAX_5yOvC&_nc_ht=scontent-bos3-1.xx&oh=00_AT8jLqkwq4yZaCeyi9bb66kDtQLDpYv-DLum7DUIfhWmCw&oe=61E3C344', location: "Denver, CO."} ,
+        {name: 'Dot' ,breed: 'Mutt' ,date:'12/16/2021', image:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fqph.fs.quoracdn.net%2Fmain-qimg-b20e3fc9bd3907367ad437beb6254681&f=1&nofb=1', location: "Mt.Sherman" } ,
+        {name: 'potato' ,breed: 'Mutt' ,date:'12/16/2021', image:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fqph.fs.quoracdn.net%2Fmain-qimg-9ce1fca5e6dd173d02f3996c3f0e5c0f&f=1&nofb=1', location: "Quandry"} ,
           
     ]
 

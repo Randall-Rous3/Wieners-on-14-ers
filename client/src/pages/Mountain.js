@@ -34,15 +34,16 @@ const Mountains = (props) => {
     <div className="mountain-grid">
         {mountains.map((mountain) => (
         <MountainCard
-        key={mountain.id}
-        {...mountain}
-        name = {mountain.name}
-        image={mountain.image}
-        id = {mountain._id}
-        onClick= {()=>
-            props.history.push(`/mountains/${mountain._id}`)
+          key={mountain.id}
+          {...mountain}
+          name = {mountain.name}
+          image={mountain.image}
+          id = {mountain._id}
+          elevation = {mountain.elevation}
+          onClick= {()=> props.history.push(`/mountains/details/${mountain._id}`)
         }
         />
+
       ))} 
     </div>
   );

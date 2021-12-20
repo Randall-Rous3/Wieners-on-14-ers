@@ -8,9 +8,22 @@ const Dogs = require('../models/Dogs')
 
 
 
-
-
-
+const updateDog = async (req, res) => {
+    try {
+        const { id } = req.params;
+        await Dogs.findByIdAndUpdate(id, req.body, { new: true }, (err, dog) => {
+            if (err) {
+                res.status(500).send(err);
+            }
+            if (!dog) {
+                res.status(500).send('dog not found!');
+            }
+            return res.status(200).json(dog);
+        })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
 
 const deleteDog = async (req, res) => {
     try {
@@ -61,6 +74,15 @@ const getAllMountains = async (req, res) => {
       return res.status(500).send(error.message);
   }
 }
+const createMountain = async (req, res) => {
+    try {
+        const mountains = await new Mountains(req.body)
+        await mountains.save()
+        return res.status(201).json({ mountains });
+    } catch (error) {
+        return res.status(500).json({ error: error.message })
+    }
+}
 const addDogToMount = async (req, res ) => {
  
         try {
@@ -74,6 +96,8 @@ const addDogToMount = async (req, res ) => {
 
 
 module.exports = {
+    createMountain,
+    updateDog,
     getDogById,
     deleteDog,
     createDog,
