@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, createElement } from 'react';
 import axios from 'axios';
 import MountainDogs from '../pages/Mountain_Dogs';
 
@@ -10,19 +10,12 @@ import MountainDogs from '../pages/Mountain_Dogs';
 
 
 const DogCard = (props) => {
-  
 
   const deleteDog = (e) =>{
-   
-   
-    console.log(props.id);
     axios
       .delete(`http://localhost:3001/api/dogs/${props.id}`, )
       .then (props.render)
-      
-    
 }
-
 
 
     return (
@@ -32,7 +25,7 @@ const DogCard = (props) => {
           <img className='img' src= {props.image} alt="Dog"/> <br/>
           <button className='delete' onClick={deleteDog}>delete </button>          
         <div className="info-wrapper flex-row space">
-          <h3> breed: {props.breed} <br/> date: {props.date} <br/> Mountain: {props.location} </h3>
+          <h3> breed: {props.breed} <br/> date: {props.date} <br/> Mountain: {props.location}  </h3>
         </div>
       </div>
       </div>

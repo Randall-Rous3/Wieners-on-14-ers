@@ -13,23 +13,31 @@ import MountainCard from '../components/MountainCard';
 
 
 const MountainDetails = (props) => {
-  let mountainsArray = [];
-  const [mountainDetails, setMountainDetails] = useState(mountainsArray);
+  let detailsArray = [];
+  const [mountainDetails, setMountainDetails] = useState(detailsArray);
 
-
-  const getMountains = async () => {
-    const response = await axios.get(`http://localhost:3001/api/mountains/`);
-    setMountainDetails(response.data.mountains);
+console.log(props)
+  const getDetails = async (mountain) => {
+      console.log(mountain)
+    const response = await axios.get(`http://localhost:3001/api/mountains/${props.match.params.mountainId}`);
+    console.log(response.data.mountain)
+    setMountainDetails(response.data.mountain);
   };
-
+  
+console.log(mountainDetails.mountain)
   useEffect(() => {
-    getMountains();
+    getDetails();
   }, []);
 
 
 return (
-<div>
-    <h1>{mountainDetails.name}</h1>
+<div className= "details">
+    <h1> {mountainDetails.name} </h1>
+    <h3> Location: {mountainDetails.location} <br/> Elevation: {mountainDetails.elevation}</h3>
+    <img className = "img" src = {mountainDetails.image}/>
+
+  
+       
 </div>
 )
 }

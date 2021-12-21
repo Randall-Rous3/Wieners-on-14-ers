@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import MountainCard from '../components/MountainCard';
+import MountainDetails from './mountainDetails';
 
 
 
@@ -18,15 +19,17 @@ const Mountains = (props) => {
   const showMountains = (mountain) => {};
 
 
+
   const getMountains = async () => {
     const response = await axios.get('http://localhost:3001/api/mountains');
     setMountains(response.data.mountains);
   };
+  mountains.sort((a, b) => a.name.localeCompare(b.name))
 
+  
   useEffect(() => {
     getMountains();
   }, []);
-
 
 
 
@@ -43,8 +46,11 @@ const Mountains = (props) => {
           onClick= {()=> props.history.push(`/mountains/details/${mountain._id}`)
         }
         />
-
       ))} 
+      
+     
+    
+
     </div>
   );
   

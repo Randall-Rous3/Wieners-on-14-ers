@@ -16,7 +16,8 @@ export default function AddDog(props) {
     name: '',
     breed: '',
     date: '',
-    image: ''
+    image: '',
+    description:''
   });
   const createDog = (e) =>{
     e.preventDefault();
@@ -32,7 +33,8 @@ export default function AddDog(props) {
       breed: '',
       date: '',
       image:'',
-      location: ''
+      location: '',
+      description:''
     });
 }
 const getMountainDogs = async () => {
@@ -83,6 +85,13 @@ useEffect(() => {
           name={'date'}
           label={'date of photo'}
         />
+        {/* <input
+          type="text"
+          value={newDog.description}
+          onChange={handleChange}
+          name={'description'}
+          placeholder={'description'} */}
+        {/* /> */}
         <input
           type="text"
           accept='image/*'
@@ -158,7 +167,7 @@ useEffect(() => {
         </select>
         <button type="submit">Submit</button>
       </form>
-      <div><h1>Show All Dogs</h1>  
+      <div>
       
       <div className="dog-grid">
         {mountDog.map((dog) => (
@@ -169,6 +178,7 @@ useEffect(() => {
         image={dog.image}
         breed ={dog.breed}
         id = {dog._id}
+        description= {dog.description}
         location = {dog.location}
         render ={getMountainDogs}
         />

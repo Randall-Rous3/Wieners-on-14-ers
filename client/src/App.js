@@ -11,18 +11,19 @@ import DogCard from './components/DogCard';
 import MountainDetails from './pages/mountainDetails'
 
 
+
 function App() {
   return (
     <div className="App">
-    <Header />
+    <Header />   
     <main>
         <Switch>
           <Route exact path="/" component ={Home} />
           <Route path="/addDog" component = {AddDog}/>
+          <Route exact path="/mountains/details/:mountainId" component = {MountainDetails}/>
           <Route path="/mountains" component ={Mountain} />
-          <Route path="/mountains/:mountainId" component = {MountainCard} />
+          <Route exact path="/mountains/:mountainId" component = {MountainCard} />
           <Route path="/dogs" component = {MountainDogs} />
-          <Route path="/mountains/details/:mountainId" component ={MountainDetails}/>
         </Switch>
       </main>
     </div>

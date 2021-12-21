@@ -1,13 +1,21 @@
 @font-face {
   font-family: 'Fuzzy Bubbles', cursive;
-  src: url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Montserrat+Alternates:wght@100&family=Permanent+Marker&family=Warnes&display=swap');
+  src: url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Montserrat+Alternates:wght@100&family=Permanent+Marker&family=Rock+3D&family=Rock+Salt&family=Warnes&display=swap');
 }
 .App {
 
   text-align: center;
+  display: grid;
+  gap: 1rem;
 }
+.homePic{
+  height:30em;
+  width: auto;
+}
+
 form {
-  background-color:rgba(14, 110, 236, 0.1) ;
+  position: relative;
+  background-color:rgba(0, 4, 8, 0.1) ;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -19,18 +27,28 @@ form {
 
 h1{
   text-align:center;
-  font-family:'Fuzzy Bubbles', cursive;
+  font-family:'Rock Salt', cursive;
 
 }
 h3{
   text-align:center;
-  font-family:'Fuzzy Bubbles', cursive;
-
+  font-family:'Rock Salt', cursive;
+  color: rgb(10, 10, 10);
+}
+.boardText{
+  text-align:center;
+  font-family:'Permanent Marker', cursive;
+  font-size: 2vh;
+  color: rgb(41, 39, 39);
 }
 .home{
   display: flex;
   justify-content: center;
   text-align: center;
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkey.com%2Fpng%2Ffull%2F153-1538769_cardboard-blank-cardboard-sign-png.png&f=1&nofb=1');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 
 }
 .dog-card{
@@ -47,6 +65,7 @@ h3{
   max-height: 25vh;
   max-width: auto;
 }
+
 .dog-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -65,67 +84,63 @@ h3{
   max-height:30vmin ;
   width: auto;
   border-radius: 1vmin;
-  border: solid black 1px; 
+  border: solid rgb(0, 3, 7) .2em; 
   
 
 }
 
 .input {
+  color:rgb(128, 169, 247) ;
   width: 15vw;
   height: auto;
 
 }
 header{
-  
-    display: grid;
-    grid-template-areas:
-    'headerL headerC headerR'
-    'midL midC midR '
-    'footer footer footer';
-    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.uncovercolorado.com%2Fwp-content%2Fuploads%2F2019%2F08%2FSan-Juan-Mountains-1.jpg&f=1&nofb=1');
-    background-size: cover;
-    background-position: center;
-    grid-gap: 10px;
-    padding: 10px;
-  }
-  .logo{
-    height: 20em;
-    width: 20em;
-    grid-area: midL;
-    animation: App-logo-spin infinite 20s linear;
-    border-radius: 1vmin;
+  position: inherit;
+  display: grid;
+  grid-template-areas:
+  'headerL headerC headerR'
+  'midL midC midR '
+  'footer footer footer';
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages_k%2Fmountain-transparent%2Fmountain-transparent-13.png&f=1&nofb=1https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages_k%2Fmountain-transparent%2Fmountain-transparent-13.png&f=1&nofb=1');
+  background-size: 100% auto;
+  background-position: center;
+  grid-gap: 10px;
     
+  }
+.logo{
+  height: 20em;
+  width: auto;
+  /* animation: App-logo-spin infinite 20s linear; */
+  
   
   }
 #name{
   grid-area: headerC;
   text-align: center;
   font-size: 7vmin;
-  font-family: 'Fuzzy Bubbles', cursive;
+  font-family:  'Rock 3D', cursive;
+  color: rgb(3, 20, 36);
 }
 nav{
   grid-area: midC;
-  border-radius: 5px;
-  
+  border-radius: 5px;  
   display: flex;
   justify-content: center;
   align-items: center;
   height: 3em;
   font-size: 2vw;
   font-weight: bold;
-  font-family: 'Fuzzy Bubbles', cursive;
+  font-family:'Rock 3D', cursive;
 }
+
  .nav   {
   margin: 0 1em;
-  color: black;
- 
+  color: rgb(3, 20, 36); 
   text-decoration: none;
 }
 .nav:hover{
   transform: scale(1.2);
-}
-h3{
-  text-align: center;
 }
 .delete{
  
