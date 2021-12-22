@@ -31,11 +31,12 @@ console.log(mountainDetails.mountain)
 
 
 return (
-<div className= "details">
+<div >
     <h1> {mountainDetails.name} </h1>
-    <h3> Location: {mountainDetails.location} <br/> Elevation: {mountainDetails.elevation}</h3>
-    <img className = "img" src = {mountainDetails.image}/>
-
+    <div className= "details">
+        <h3> Range: {mountainDetails.range} <br/> Elevation: {mountainDetails.elevation}<br/> {mountainDetails.coordinates}<br/> {mountainDetails.description}</h3>
+    <   img className = "mountPic" src = {mountainDetails.image}/>
+    </div>
   
        
 </div>

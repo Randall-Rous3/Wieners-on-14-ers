@@ -8,93 +8,6 @@
   display: grid;
   gap: 1rem;
 }
-.homePic{
-  height:30em;
-  width: auto;
-}
-
-form {
-  position: relative;
-  background-color:rgba(0, 4, 8, 0.1) ;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: auto;
-  min-height: auto;
-  border-radius: 0.3em;
-}
-
-h1{
-  text-align:center;
-  font-family:'Rock Salt', cursive;
-
-}
-h3{
-  text-align:center;
-  font-family:'Rock Salt', cursive;
-  color: rgb(10, 10, 10);
-}
-.boardText{
-  text-align:center;
-  font-family:'Permanent Marker', cursive;
-  font-size: 2vh;
-  color: rgb(41, 39, 39);
-}
-.home{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkey.com%2Fpng%2Ffull%2F153-1538769_cardboard-blank-cardboard-sign-png.png&f=1&nofb=1');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-
-}
-.dog-card{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-height: 25vh;
-  max-width: auto;
-}
-.mountain-card{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-height: 25vh;
-  max-width: auto;
-}
-
-.dog-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  flex-wrap: wrap;
-  gap: 1rem;
- 
-
-}
-.mountain-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-  
-}
-.img{
-  max-height:30vmin ;
-  width: auto;
-  border-radius: 1vmin;
-  border: solid rgb(0, 3, 7) .2em; 
-  
-
-}
-
-.input {
-  color:rgb(128, 169, 247) ;
-  width: 15vw;
-  height: auto;
-
-}
 header{
   position: inherit;
   display: grid;
@@ -106,21 +19,6 @@ header{
   background-size: 100% auto;
   background-position: center;
   grid-gap: 10px;
-    
-  }
-.logo{
-  height: 20em;
-  width: auto;
-  /* animation: App-logo-spin infinite 20s linear; */
-  
-  
-  }
-#name{
-  grid-area: headerC;
-  text-align: center;
-  font-size: 7vmin;
-  font-family:  'Rock 3D', cursive;
-  color: rgb(3, 20, 36);
 }
 nav{
   grid-area: midC;
@@ -142,12 +40,135 @@ nav{
 .nav:hover{
   transform: scale(1.2);
 }
+
+.home{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngkey.com%2Fpng%2Ffull%2F153-1538769_cardboard-blank-cardboard-sign-png.png&f=1&nofb=1');
+  background-size: 100em cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-width: 100em;
+  max-height: 100em;
+
+}
+
+form {
+  position: relative;
+  background-color:rgba(0, 4, 8, 0.1) ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: auto;
+  min-height: auto;
+  border-radius: 0.3em;
+}
+
+h1{
+  text-align:center;
+  font-family:'Rock Salt', cursive;
+
+}
+h3{
+  font-size: 2vh;
+  text-align:center;
+  font-family:'Rock Salt', cursive;
+  color: rgb(10, 10, 10);
+}
+.boardText{
+  text-align:center;
+  font-family:'Permanent Marker', cursive;
+  font-size: 4vmin;
+  color: rgb(41, 39, 39);
+  max-width: 28em;
+}
+
+.dog-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 25em;
+  max-width: auto;
+}
+.mountain-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 25vh;
+  max-width: auto;
+}
+
+.dog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  gap: 1rem;
+ 
+
+}
+.mountain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  gap: 1rem;
+  
+}
+.details{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+}
+.mountPic{
+  min-height: 25em;
+  max-height: 25em;
+  width: auto;
+  border-radius: 1em;
+  
+}
+.img:hover{
+  border: solid black .3em;
+}
+
+.img{
+  height:30vmin ;
+  width: auto;
+  border-radius: 1vmin;
+}
+.dogImg{
+  height:30vmin ;
+  width: auto;
+  border-radius: 1vmin;
+}
+
+.input {
+  color:rgb(128, 169, 247) ;
+  width: 15vw;
+  height: auto;
+}
+
+.logo{
+  height: 20em;
+  width: auto;
+  /* animation: App-logo-spin infinite 20s linear; */
+  
+  
+  }
+#name{
+  grid-area: headerC;
+  text-align: center;
+  font-size: 7vmin;
+  font-family:  'Rock 3D', cursive;
+  color: rgb(3, 20, 36);
+}
+
 .delete{
  
   border-radius: 1vmin;
 }
 .delete:hover{
-  border: solid red 1px;
+  border: solid red .3em;
 }
 
 @keyframes App-logo-spin {

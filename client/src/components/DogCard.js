@@ -22,10 +22,10 @@ const DogCard = (props) => {
         <div>
             <h1>{props.name}</h1>
       <div className="Dog-card" onClick={props.onClick}>
-          <img className='img' src= {props.image} alt="Dog"/> <br/>
+          <img className='dogImg' src= {props.image} alt="Dog"/> <br/>
           <button className='delete' onClick={deleteDog}>delete </button>          
         <div className="info-wrapper flex-row space">
-          <h3> breed: {props.breed} <br/> date: {props.date} <br/> Mountain: {props.location}  </h3>
+          <h3> date: {props.date}<br/> breed: {props.breed}  <br/> Mountain: {props.location}  </h3>
         </div>
       </div>
       </div>
