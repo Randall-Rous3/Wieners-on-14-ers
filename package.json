@@ -30,5 +30,6 @@
   "bugs": {
     "url": "https://github.com/Randall-Rous3/Wieners-on-14-ers/issues"
   },
-  "homepage": "https://github.com/Randall-Rous3/Wieners-on-14-ers#readme"
+  "homepage": "https://github.com/Randall-Rous3/Wieners-on-14-ers#readme",
+  "devDependencies": {}
 }

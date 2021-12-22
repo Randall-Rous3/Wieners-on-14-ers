@@ -15,27 +15,64 @@ import MountainCard from '../components/MountainCard';
 const MountainDetails = (props) => {
   let detailsArray = [];
   const [mountainDetails, setMountainDetails] = useState(detailsArray);
+  const [returnId, setReturnId] = useState(props.match.params.mountainId);
+  const [updatedMount, setUpdatedMount] = useState({
 
-console.log(props)
+    description:''
+  });
+  const updateMount = (e) =>{
+    e.preventDefault();
+    const newMount = {
+      ...updatedMount
+    };
+    console.log(updatedMount);
+    axios
+      .put(`http://localhost:3001/api/mountains/update/${props.match.params.mountainId}`, newMount)
+      .then((response) => setReturnId(response.data))
+        setUpdatedMount({
+         description:''
+    });
+}
+  const handleChange = (e) => {
+        setUpdatedMount({ ...updatedMount, [e.target.name]: e.target.value });
+       
+      };
+    const handleSubmit = (e) => {
+       updateMount(e)
+       getDetails()
+    };
+
+
   const getDetails = async (mountain) => {
-      console.log(mountain)
     const response = await axios.get(`http://localhost:3001/api/mountains/${props.match.params.mountainId}`);
-    console.log(response.data.mountain)
-    setMountainDetails(response.data.mountain);
+        setMountainDetails(response.data.mountain);
   };
   
-console.log(mountainDetails.mountain)
+
   useEffect(() => {
     getDetails();
   }, []);
-
+  
+ 
 
 return (
 <div >
     <h1> {mountainDetails.name} </h1>
     <div className= "details">
         <h3> Range: {mountainDetails.range} <br/> Elevation: {mountainDetails.elevation}<br/> {mountainDetails.coordinates}<br/> {mountainDetails.description}</h3>
-    <   img className = "mountPic" src = {mountainDetails.image}/>
+    < img className = "mountPic" src = {mountainDetails.image}/>
+    <form className='form' onSubmit={handleSubmit}>
+       
+        <input
+          type="text"
+          value={updatedMount.description}
+          onChange={handleChange}
+          name={'description'}
+          placeholder={'mountain desription'}
+        />
+        <button type="submit">Edit</button>
+
+        </form>
     </div>
   
        
