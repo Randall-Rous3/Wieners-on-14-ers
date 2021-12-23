@@ -51,3 +51,7 @@ Creating a app that allows people to add pictures of their best friend (dog) on 
 * Your code should be properly indented, spaced, and within code blocks. DO NOT leave in commented out code that was left unused (bad practice). Comments should be in your code to describe what your functions are doing.
 * Be deployed on Heroku
 Project Completed Due Date: 12/23/21 by 1:30pm EST
+
+### References 
+ Wikipedia- Mountain pics and details
+[14ers] https://en.wikipedia.org/wiki/List_of_Colorado_fourteeners
