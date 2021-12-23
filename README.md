@@ -26,7 +26,11 @@ Creating a app that allows people to add pictures of their best friend (dog) on 
 * install mongoose
 * install express
 
-
+## Tach used
+* Mongoose
+* Express
+* React
+* Node.js
 
 
 
