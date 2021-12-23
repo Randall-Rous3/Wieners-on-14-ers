@@ -6,8 +6,6 @@ import MountainCard from '../components/MountainCard';
 
 
 
-
-
    
 
 
@@ -25,7 +23,6 @@ const MountainDetails = (props) => {
     const newMount = {
       ...updatedMount
     };
-    console.log(updatedMount);
     axios
       .put(`http://localhost:3001/api/mountains/update/${props.match.params.mountainId}`, newMount)
       .then((response) => setReturnId(response.data))
@@ -33,21 +30,22 @@ const MountainDetails = (props) => {
          description:''
     });
 }
-  const handleChange = (e) => {
-        setUpdatedMount({ ...updatedMount, [e.target.name]: e.target.value });
-       
-      };
-    const handleSubmit = (e) => {
-       updateMount(e)
-       getDetails()
-    };
 
 
-  const getDetails = async (mountain) => {
+const handleChange = (e) => {
+    setUpdatedMount({ ...updatedMount, [e.target.name]: e.target.value });
+   
+  };
+const handleSubmit = (e) => {
+   updateMount(e)
+   getDetails(e)
+};
+
+const getDetails = async (mountain) => {
     const response = await axios.get(`http://localhost:3001/api/mountains/${props.match.params.mountainId}`);
         setMountainDetails(response.data.mountain);
   };
-  
+
 
   useEffect(() => {
     getDetails();
@@ -60,7 +58,7 @@ return (
     <h1> {mountainDetails.name} </h1>
     <div className= "details">
         <h3> Range: {mountainDetails.range} <br/> Elevation: {mountainDetails.elevation}<br/> {mountainDetails.coordinates}<br/> {mountainDetails.description}</h3>
-        < img className = "mountPic" src = {mountainDetails.image}/>
+        < img className = "mountPic" src = {mountainDetails.image} alt={mountainDetails.name}/>
         <form className='form' onSubmit={handleSubmit}>
        
         <input

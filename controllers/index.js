@@ -49,22 +49,7 @@ const deleteMount = async (req, res) => {
         return res.status(500).send(error.message);
     }
 }
-const updateMount = async (req, res) => {
-    try {
-        const { id } = req.params;
-        await Mountains.findByIdAndUpdate(id, req.body, { new: true }, (err, mountain) => {
-            if (err) {
-                res.status(500).send(err);
-            }
-            if (!mountain) {
-                res.status(500).send('mountain not found!');
-            }
-            return res.status(200).json(mountain);
-        })
-    } catch (error) {
-        return res.status(500).send(error.message);
-    }
-}
+
 const createDog = async (req, res) => {
     try {
         const dogs = await new Dogs(req.body)
@@ -102,6 +87,22 @@ const getMountById = async (req, res) => {
             return res.status(200).json({ mountain });
         }
         return res.status(404).send('mountain with the specified ID does not exists');
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+const updateMount = async (req, res) => {
+    try {
+        const { id } = req.params;
+        await Mountains.findByIdAndUpdate(id, req.body, { new: true }, (err, mountain) => {
+            if (err) {
+                return res.status(500).send(err);
+            }
+            if (!mountain) {
+                res.status(500).send('mountain not found!');
+            }
+            return res.status(200).json(mountain);
+        })
     } catch (error) {
         return res.status(500).send(error.message);
     }
