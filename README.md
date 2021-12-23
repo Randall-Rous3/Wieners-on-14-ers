@@ -54,4 +54,4 @@ Project Completed Due Date: 12/23/21 by 1:30pm EST
 
 ### References 
  Wikipedia- Mountain pics and details
-[14ers] https://en.wikipedia.org/wiki/List_of_Colorado_fourteeners
+[14ers](https://en.wikipedia.org/wiki/List_of_Colorado_fourteeners)
