@@ -60,8 +60,8 @@ return (
     <h1> {mountainDetails.name} </h1>
     <div className= "details">
         <h3> Range: {mountainDetails.range} <br/> Elevation: {mountainDetails.elevation}<br/> {mountainDetails.coordinates}<br/> {mountainDetails.description}</h3>
-    < img className = "mountPic" src = {mountainDetails.image}/>
-    <form className='form' onSubmit={handleSubmit}>
+        < img className = "mountPic" src = {mountainDetails.image}/>
+        <form className='form' onSubmit={handleSubmit}>
        
         <input
           type="text"

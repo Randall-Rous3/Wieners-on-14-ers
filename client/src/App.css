@@ -118,11 +118,13 @@ h3{
 .details{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3em;
+  align-content: space-between;
+  gap: 5em;
 }
 .mountPic{
   min-height: 25em;
   max-height: 25em;
+  align-self:center;
   width: auto;
   border-radius: 1em;
   
@@ -151,7 +153,6 @@ h3{
 .logo{
   height: 20em;
   width: auto;
-  /* animation: App-logo-spin infinite 20s linear; */
   
   
   }
