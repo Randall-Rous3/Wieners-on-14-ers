@@ -13,9 +13,9 @@ Creating a app that allows people to add pictures of their best friend (dog) on 
   * breed 
   * date 
   * mountain 
+![Screen Shot 2021-12-22 at 8 40 12 PM](https://user-images.githubusercontent.com/93789562/147174852-b30ccb36-2ace-4a77-b210-98d2ce5ea6ef.png)
 ![Screen Shot 2021-12-22 at 8 40 53 PM](https://user-images.githubusercontent.com/93789562/147174834-e5fb50f0-f761-4cc9-a282-aa2deeabaa36.png)
 ![Screen Shot 2021-12-22 at 8 40 42 PM](https://user-images.githubusercontent.com/93789562/147174847-a29b88a3-627b-4a9c-83db-d8c107e19d8d.png)
-![Screen Shot 2021-12-22 at 8 40 12 PM](https://user-images.githubusercontent.com/93789562/147174852-b30ccb36-2ace-4a77-b210-98d2ce5ea6ef.png)
 
 ## Getting started
 * Create repo.
