@@ -15,7 +15,10 @@ const MountainDetails = (props) => {
   const [mountainDetails, setMountainDetails] = useState(detailsArray);
   const [returnId, setReturnId] = useState(props.match.params.mountainId);
   const [updatedMount, setUpdatedMount] = useState({
-
+    name:'',
+    elevation:'',
+    range:'',
+    coordinates:'',
     description:''
   });
   const updateMount = (e) =>{
@@ -63,10 +66,39 @@ return (
        
         <input
           type="text"
-          value={updatedMount.description}
+          value={updatedMount.name}
           onChange={handleChange}
-          name={'description'}
-          placeholder={'mountain desription'}
+          name={'name'}
+          placeholder={mountainDetails.name}
+        />
+        <input
+        type="text"
+        value={updatedMount.range}
+        onChange={handleChange}
+        name={'range'}
+        placeholder={mountainDetails.range}
+      />
+        <input
+          type="text"
+          value={updatedMount.elevation}
+          onChange={handleChange}
+          name={'elevation'}
+          placeholder={mountainDetails.elevation}
+        />
+        <input
+          type="text"
+          value={updatedMount.coordinates}
+          onChange={handleChange}
+          name={'coordinates'}
+          placeholder={mountainDetails.coordinates}
+        />
+
+        <input
+            type="text"
+            value={updatedMount.description}
+            onChange={handleChange}
+            name={'description'}
+            placeholder={'mountain desription'}
         />
         <button type="submit">Edit</button>
 

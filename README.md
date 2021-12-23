@@ -1,26 +1,36 @@
 # Wieners-on-14-ers
-## [Trello](https://trello.com/b/7EIWk8R7/wieners-on-14ers)
+## [Trello](https://trello.com/b/7EIWk8R7/wieners-on-14ers) | [in](https://www.linkedin.com/in/randall-rouse/)
 
 ## Objectives
-Creating a app that allows people to add pictures of their best friend (dog) on their favorite hikes (14ers). The app will allow visitors to view pictures of dogs on all of CO. mountains over 14,000 ft. The visitor will be able to navigate to a specicic mountain and view all of the dogs on that peak or stay on the home page and generate a random dog on a random summit. 
+Creating a app that allows people to add pictures of their best friend (dog) on their favorite hikes (14ers). The app will allow visitors to view pictures of dogs on all of CO. mountains over 14,000 ft. Visitors will be able to add pictures of their own dogs! They can also delete their post if they have a change of heart. The visitor will be able to navigate to a specific mountain and view a brief description of that mountain and edit the description if they feel they can say it better. Cheers!
 
 
 ## Site setup
 * Landing page
-* Navigation bar/ random pup btn, mountain drop down list, add a pup form
-* add form
+* Navigation bar, mountain, add a pup form
+* ![Screen Shot 2021-12-22 at 8 40 12 PM](https://user-images.githubusercontent.com/93789562/147174852-b30ccb36-2ace-4a77-b210-98d2ce5ea6ef.png)
+* ![Screen Shot 2021-12-22 at 8 40 53 PM](https://user-images.githubusercontent.com/93789562/147174834-e5fb50f0-f761-4cc9-a282-aa2deeabaa36.png)
+* ![Screen Shot 2021-12-22 at 8 40 42 PM](https://user-images.githubusercontent.com/93789562/147174847-a29b88a3-627b-4a9c-83db-d8c107e19d8d.png)
+* add pup form
   * name
   * breed 
   * date 
   * mountain 
-  * commetns
+
 
 ## Getting started
 * Create repo.
 * create server.js to connect with express
 * create react app
 * create Mongo database 
+* install mongoose
+* install express
 
+## Tach used
+* Mongoose
+* Express
+* React
+* Node.js
 
 
 
@@ -41,3 +51,7 @@ Creating a app that allows people to add pictures of their best friend (dog) on 
 * Your code should be properly indented, spaced, and within code blocks. DO NOT leave in commented out code that was left unused (bad practice). Comments should be in your code to describe what your functions are doing.
 * Be deployed on Heroku
 Project Completed Due Date: 12/23/21 by 1:30pm EST
+
+### References 
+ Wikipedia- Mountain pics and details
+[14ers](https://en.wikipedia.org/wiki/List_of_Colorado_fourteeners)

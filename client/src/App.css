@@ -80,7 +80,7 @@ h3{
 .boardText{
   text-align:center;
   font-family:'Permanent Marker', cursive;
-  font-size: 4vmin;
+  font-size: 4vh;
   color: rgb(41, 39, 39);
   max-width: 28em;
 }
@@ -124,7 +124,7 @@ h3{
 .mountPic{
   min-height: 25em;
   max-height: 25em;
-  align-self:center;
+  align-self: center;
   width: auto;
   border-radius: 1em;
   
