@@ -2,7 +2,7 @@
 ## [Trello](https://trello.com/b/7EIWk8R7/wieners-on-14ers) | [in](https://www.linkedin.com/in/randall-rouse/)
 
 ## Objectives
-Creating a app that allows people to add pictures of their best friend (dog) on their favorite hikes (14ers). The app will allow visitors to view pictures of dogs on all of CO. mountains over 14,000 ft. The visitor will be able to navigate to a specicic mountain and view all of the dogs on that peak or stay on the home page and generate a random dog on a random summit. 
+Creating a app that allows people to add pictures of their best friend (dog) on their favorite hikes (14ers). The app will allow visitors to view pictures of dogs on all of CO. mountains over 14,000 ft. Visitors will be able to add pictures of their own dogs! They can also delete their post if they have a change of heart. The visitor will be able to navigate to a specific mountain and view a brief description of that mountain and edit the description if they feel they can say it better. Cheers!
 
 
 ## Site setup
