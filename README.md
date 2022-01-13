@@ -1,5 +1,5 @@
 # Wieners-on-14-ers
-## [Trello]https://trello.com/b/rbM4aKWL/project-3 
+## [Trello](https://trello.com/b/rbM4aKWL/project-3) 
 
 ## Contributers
 * Charlie Lin | [in](https://www.linkedin.com/in/charlie-lin1988/)
@@ -13,10 +13,7 @@
 ## Site setup
 * Landing page
 * Navigation bar
- * events
- * 
-*
-* 
+
 
 
 ## Getting started
