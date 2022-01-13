@@ -1,4 +1,4 @@
-# Wieners-on-14-ers
+# Creature Collab
 ## [Trello](https://trello.com/b/rbM4aKWL/project-3) 
 
 ## Contributers
