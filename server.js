@@ -5,7 +5,8 @@ const app = express()
 const routes = require ('./routes')
 const db = require('./db')
 const logger = require('morgan')
-
+const cool = require('cool-ascii-faces');
+const path = require('path');
 //  Your Code Here
 app.use(express.json())
 app.use(cors());
@@ -16,7 +17,13 @@ app.use('/api', routes)
 
 // End Your Code Here
 
-
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  // .set('views', path.join(__dirname, 'views'))
+  // .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('pages/home'))
+  .get('/cool', (req, res) => res.send(cool()))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"))
