@@ -68,6 +68,10 @@ form {
 input{
   border-radius: .3em;
 }
+select{
+  border-radius: .3em;
+
+}
 
 h1{
   text-align:center;
